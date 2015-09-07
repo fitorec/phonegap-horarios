@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Ejemplo manejo de horarios
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+    </head>
+    <body>
+	<h1>
+			Horarios
+			<select id="dia-a-mostrar">
+				<option value="1" selected>Lunes</option>
+				<option value="2">Martes</option>
+				<option value="3">Miercoles</option>
+				<option value="4">Jueves</option>
+				<option value="5">Viernes</option>
+			</select>
+		</h1>
+<!-- Dia Lunes -->
+		<table class='tabla_horario' id='dia_1'>
+			<thead>
+				<tr>
+					<th>Horario</th>
+					<th>Materia</th>
+					<th>Grupo</th>
+					<th>Lugar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>07 - 09</th>
+					<td>Arquitectura de Computadoras</td>
+					<td>5<sup>to</sup> A</td>
+					<td>CC</td>
+				</tr>
+				<tr>
+					<th>10 - 12</th>
+					<td>Sistemas Operativos II</td>
+					<td>7<sup>mo</sup> A</td>
+					<td>A5</td>
+				</tr>
+				<tr>
+					<th>12 - 14</th>
+					<td>Estructura y organización de datos</td>
+					<td>3<sup>ro</sup> A</td>
+					<td>CC</td>
+				</tr>
+				<tr>
+					<th>14 - 15</th>
+					<td>Fundamentos de investigación</td>
+					<td>1<sup>ro</sup> A</td>
+					<td>A3</td>
+				</tr>
+			</tbody>
+		</table>
+<!-- Dia Martes -->
+		<table class='tabla_horario' id='dia_2'>
+			<thead>
+				<tr>
+					<th>Horario</th>
+					<th>Materia</th>
+					<th>Grupo</th>
+					<th>Lugar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>07 - 09</th>
+					<td>Fundamentos de Bases de Datos</td>
+					<td>3<sup>ro</sup> A</td>
+					<td>A5</td>
+				</tr>
+				<tr>
+					<th>10 - 12</th>
+					<td>Fundamentos de Investigación</td>
+					<td>1<sup>ro</sup> A</td>
+					<td>A3</td>
+				</tr>
+				<tr>
+					<th>12 - 13</th>
+					<td>Desarrollo de aplicaciones para dispositivos moviles</td>
+					<td>7<sup>mo</sup> A</td>
+					<td>A3</td>
+				</tr>
+				<tr>
+					<th>14 - 15</th>
+					<td>Estructura y Organización de datos</td>
+					<td>3<sup>ro</sup> A</td>
+					<td>A3</td>
+				</tr>
+			</tbody>
+		</table>
+<!-- Dia Miercoles -->
+		<table class='tabla_horario' id='dia_3'>
+			<thead>
+				<tr>
+					<th>Horario</th>
+					<th>Materia</th>
+					<th>Grupo</th>
+					<th>Lugar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>07 - 09</th>
+					<td>Taller de Ingenieria de Software</td>
+					<td>5<sup>to</sup> A</td>
+					<td>A8</td>
+				</tr>
+				<tr>
+					<th>10 - 12</th>
+					<td>Sistemas Operativos II</td>
+					<td>7<sup>mo</sup> A</td>
+					<td>CC</td>
+				</tr>
+				<tr>
+					<th>12 - 14</th>
+					<td>Fundamentos de bases de datos</td>
+					<td>3<sup>ro</sup> A</td>
+					<td>CC</td>
+				</tr>
+			</tbody>
+		</table>
+<!-- Dia Jueves -->
+		<table class='tabla_horario' id='dia_4'>
+			<thead>
+				<tr>
+					<th>Horario</th>
+					<th>Materia</th>
+					<th>Grupo</th>
+					<th>Lugar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>07 - 09</th>
+					<td>Desarrollo de aplicaciones para dispositivos móviles</td>
+					<td>7<sup>mo</sup> A</td>
+					<td>CC</td>
+				</tr>
+				<tr>
+					<th>10 - 12</th>
+					<td>Taller de Ingeniría de software</td>
+					<td>5<sup>to</sup> A</td>
+					<td>CC</td>
+				</tr>
+				<tr>
+					<th>12 - 14</th>
+					<td>Arquitectura de computadoras</td>
+					<td>5<sup>to</sup> A</td>
+					<td>A7</td>
+				</tr>
+				<tr>
+					<th>14 - 15</th>
+					<td>Fundamentos de Investigación</td>
+					<td>1<sup>ro</sup> A</td>
+					<td>A2</td>
+				</tr>
+			</tbody>
+		</table>
+<!-- Dia Viernes -->
+		<table class='tabla_horario' id='dia_5'>
+			<thead>
+				<tr>
+					<th>Horario</th>
+					<th>Materia</th>
+					<th>Grupo</th>
+					<th>Lugar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>08 - 09</th>
+					<td>Fundamentos de Bases de datos</td>
+					<td>3<sup>ro</sup> A</td>
+					<td>A9</td>
+				</tr>
+				<tr>
+					<th>10 - 12</th>
+					<td>Estructura y organización de datos</td>
+					<td>3<sup>ro</sup> A</td>
+					<td>A10</td>
+				</tr>
+				<tr>
+					<th>12 - 14</th>
+					<td>Sistemas operativos II</td>
+					<td>7<sup>mo</sup> A</td>
+					<td>A1</td>
+				</tr>
+				<tr>
+					<th>14 - 15</th>
+					<td>Desarrollo de aplicaciones para dispositivos móviles</td>
+					<td>7<sup>mo</sup> A</td>
+					<td>A14</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Aqui agregar tabla de sus horarios -->
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			app.initialize();
+		</script>
+	</body>
+</html>
