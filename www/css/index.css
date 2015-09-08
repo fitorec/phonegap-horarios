@@ -19,24 +19,26 @@ body {
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    font-size: 1em;
     height:100%;
     margin:0px;
     padding:0px;
     text-transform:uppercase;
     width:100%;
+    color: #222;
 }
 
 
-h1 {
-    font-size:24px;
+#dia-a-mostrar {
+	display: block;
+    font-size: 2em;
+    width: 100%;
+    background: #BFBFBF;
     font-weight:normal;
     margin:0px;
     overflow:visible;
     padding:0px;
-    text-align:center;
 }
-
 .tabla_horario {
 	display: none;
 }
@@ -47,12 +49,29 @@ table{
 	background: #FFF;
 }
 td, th {
+	text-align: center;
 	border: 1px solid #AAA;
 	margin: 0;
+	padding: 5px;
 }
-sup {
+td div {
+	border-top: 5px solid RGBA(0,0,0,0.6);
+	padding: 5px;
 	font-size: 0.7em;
 	color: #444;
 }
-tr:nth-child(even) {background: #CCC}
-tr:nth-child(odd) {background: #FFF}
+.grupo {
+	float: left;
+}
+.lugar {
+	float: right;
+}
+sup {
+	font-size: 0.7em;
+}
+tr:nth-child(even) {background: #FFF}
+tbody tr:nth-child(odd) {background: #CCC}
+
+
+tr.activa:nth-child(even) {background: #B0FF8F}
+tbody tr.activa:nth-child(odd) {background: #B0FF8F}

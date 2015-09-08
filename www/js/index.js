@@ -15,5 +15,19 @@ var app = {
 		}
 		this.$selectorDia.val(dia);
 		$('#dia_' + dia).fadeIn('slow');
+		this.revisarHorarios();
+	},
+	revisarHorarios: function() {
+		console.log("corriendo la funcion de prueba");
+		var today=new Date();
+		var horas=today.getHours();
+		var diaSeleccionado = $('#dia-a-mostrar').val();
+		
+		$('tr.activa').removeClass('activa');
+		$('#dia_' + diaSeleccionado + ' tbody tr th').each(function(key, value) {
+			console.log($(this).text());
+		});
+		//setTimeout("app.revisarHorarios()", 30000);
+		setTimeout("this.revisarHorarios()", 1000);
 	}
 };

@@ -2,7 +2,7 @@
 <widget id="mx.edu.itsmigra.horario" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Horario</name>
     <description>
-        Una muy simple aplicacion
+        Una muy simple aplicacion que muestra mis horarios actuales
     </description>
     <author email="chanerec@gmail.com" href="http://itsmigra.edu.mx">
         Itsmigra team
@@ -14,7 +14,6 @@
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
-    <gap:plugin name="org.apache.cordova.dialogs" />
     <gap:plugin name="org.apache.cordova.media" />
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
