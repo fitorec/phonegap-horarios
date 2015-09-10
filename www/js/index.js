@@ -15,19 +15,33 @@ var app = {
 		}
 		this.$selectorDia.val(dia);
 		$('#dia_' + dia).fadeIn('slow');
-		this.revisarHorarios();
+		//Mostrando la fecha actual
+		var meses = new Array(
+				"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio",
+				"Agosto","Septiembre","Octubre","Noviembre","Diciembre"
+			);
+		var fechaStr = d.getDate() + " de " + meses[d.getMonth()];
+		$('#fecha').text(fechaStr);
+		//
+		this.actualizarVista();
 	},
-	revisarHorarios: function() {
-		console.log("corriendo la funcion de prueba");
+	actualizarVista: function() {
+		console.log("Corriendo la funcion que detecta los horarios");
 		var today=new Date();
-		var horas=today.getHours();
+		var horaActual = parseInt(today.getHours());
 		var diaSeleccionado = $('#dia-a-mostrar').val();
 		
 		$('tr.activa').removeClass('activa');
-		$('#dia_' + diaSeleccionado + ' tbody tr th').each(function(key, value) {
-			console.log($(this).text());
+		$('#dia_' + diaSeleccionado + ' tbody tr th').each(function() {
+			var horarios = $(this).text().split('-');
+			var horaInicial = parseInt($.trim(horarios[0]));
+			var horaFinal = parseInt($.trim(horarios[1]));
+			//Aqui comparar horaActual con horaInicial y horaFinal
+			// Y agregar la clase "activa"
 		});
-		//setTimeout("app.revisarHorarios()", 30000);
-		setTimeout("this.revisarHorarios()", 1000);
+		//Aqui se debe de actualizar el elemento con id hora
+		// .........................................
+		//Mandamos a llamar a la función actualizarVista
+		setTimeout("app.actualizarVista()", 300000);
 	}
 };

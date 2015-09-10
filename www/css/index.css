@@ -28,8 +28,8 @@ body {
     color: #222;
 }
 
-
-#dia-a-mostrar {
+/** Cabecera de la aplicación **/
+h1 {
 	display: block;
     font-size: 2em;
     width: 100%;
@@ -39,6 +39,22 @@ body {
     overflow:visible;
     padding:0px;
 }
+#hora,
+#fecha,
+#dia-a-mostrar {
+	width: 31%;
+	display: inline-block;
+}
+#dia-a-mostrar {
+	font-size: 1.5em;
+}
+#fecha {
+	text-align: center;
+}
+#hora {
+	text-align: right;
+}
+
 .tabla_horario {
 	display: none;
 }

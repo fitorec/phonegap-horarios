@@ -1,26 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="mx.edu.itsmigra.horario" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Horario</name>
-    <description>
-        Una muy simple aplicacion que muestra mis horarios actuales
-    </description>
-    <author email="chanerec@gmail.com" href="http://itsmigra.edu.mx">
-        Itsmigra team
-    </author>
-    <content src="index.html" />
-    <preference name="permissions" value="none" />
-    <preference name="orientation" value="default" />
-    <preference name="target-device" value="universal" />
-    <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="true" />
-    <preference name="prerendered-icon" value="true" />
-    <gap:plugin name="org.apache.cordova.media" />
-    <icon src="icon.png" />
-    <access origin="*" />
-    <plugin name="cordova-plugin-whitelist" version="1" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <platform name="android">
-        <allow-intent href="market:*" />
-    </platform>
+	<name>Horario</name>
+	<description>
+		Una muy simple aplicación que muestra mis horarios actuales de un profesor/grupo.
+	</description>
+	<author email="chanerec@gmail.com" href="http://itsmigra.edu.mx">
+		Itsmigra team.
+	</author>
+	<content src="index.html" />
+	<preference name="permissions" value="none" />
+	<preference name="orientation" value="default" />
+	<preference name="target-device" value="universal" />
+	<preference name="fullscreen" value="true" />
+	<preference name="webviewbounce" value="true" />
+	<preference name="prerendered-icon" value="true" />
+	<gap:plugin name="org.apache.cordova.media" />
+	<icon src="icon.png" />
+	<access origin="*" />
+	<plugin name="cordova-plugin-whitelist" version="1" />
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
+	<platform name="android">
+		<allow-intent href="market:*" />
+	</platform>
 </widget>
