@@ -11,12 +11,11 @@ var app = {
 		$(document).on( "swipeleft swipedown swiperight swipeup", "table", function(e){
 			var diaAMostrar = parseInt($('#dia-a-mostrar').val());
 			if(e.type == 'swipeleft' || e.type == 'swipedown') {
-				diaAMostrar = (diaAMostrar>2)? diaAMostrar-1: 5;
+				diaAMostrar = (diaAMostrar>1)? diaAMostrar-1: 5;
 			}
 			if(e.type == 'swiperight' || e.type == 'swipeup') {
 				diaAMostrar = (diaAMostrar<5)? diaAMostrar+1: 1;
 			}
-			console.log("Dia a mostrar:" + diaAMostrar);
 			$('#dia-a-mostrar').val(diaAMostrar).change();
 		});
 		//Codigo al iniciar phonegap
