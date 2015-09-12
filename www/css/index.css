@@ -39,19 +39,30 @@ h1 {
     overflow:visible;
     padding:0px;
 }
-#hora,
-#fecha,
-#dia-a-mostrar {
-	width: 31%;
+#dia-a-mostrar-button span {
+	display: none;
+}
+.ui-select {
+	width: 50%;
 	display: inline-block;
+}
+#dia-a-mostrar-button {
+	display: inline;
 }
 #dia-a-mostrar {
 	font-size: 1.5em;
+	display: inline-block;
+}
+#hora,
+#fecha{
+	display: inline-block;
 }
 #fecha {
+	width: 25%;
 	text-align: center;
 }
 #hora {
+	width: 20%;
 	text-align: right;
 }
 

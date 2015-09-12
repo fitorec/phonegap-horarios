@@ -11,10 +11,10 @@ var app = {
 		$(document).on( "swipeleft swipedown swiperight swipeup", "table", function(e){
 			var diaAMostrar = parseInt($('#dia-a-mostrar').val());
 			if(e.type == 'swipeleft' || e.type == 'swipedown') {
-				diaAMostrar = (diaAMostrar>1)? diaAMostrar-1: 5;
+				diaAMostrar = (diaAMostrar=1)? 1: dia + 1;
 			}
 			if(e.type == 'swiperight' || e.type == 'swipeup') {
-				diaAMostrar = (diaAMostrar<5)? diaAMostrar+1: 1;
+				diaAMostrar = (diaAMostrar==1)? 5: dia - 1;
 			}
 			$('#dia-a-mostrar').val(diaAMostrar).change();
 		});
@@ -28,8 +28,8 @@ var app = {
 		$('#dia_' + dia).fadeIn('slow');
 		//Mostrando la fecha actual
 		var meses = new Array(
-				"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio",
-				"Agosto","Septiembre","Octubre","Noviembre","Diciembre"
+				"Ene","Feb","Mar","Abr","May","Jun","Jul",
+				"Ago","Sept","Oct","Nov","Dic"
 			);
 		var fechaStr = d.getDate() + " de " + meses[d.getMonth()];
 		$('#fecha').text(fechaStr);
