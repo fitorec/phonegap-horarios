@@ -14,7 +14,6 @@
 	<preference name="fullscreen" value="true" />
 	<preference name="webviewbounce" value="true" />
 	<preference name="prerendered-icon" value="true" />
-	<gap:plugin name="org.apache.cordova.media" />
 	<icon src="icon.png" />
 	<access origin="*" />
 	<plugin name="cordova-plugin-whitelist" version="1" />
