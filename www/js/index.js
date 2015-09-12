@@ -11,10 +11,10 @@ var app = {
 		$(document).on( "swipeleft swipedown swiperight swipeup", "table", function(e){
 			var diaAMostrar = parseInt($('#dia-a-mostrar').val());
 			if(e.type == 'swipeleft' || e.type == 'swipedown') {
-				diaAMostrar = (diaAMostrar==5)? 1: dia + 1;
+				diaAMostrar = (diaAMostrar==5)? 1: diaAMostrar + 1;
 			}
 			if(e.type == 'swiperight' || e.type == 'swipeup') {
-				diaAMostrar = (diaAMostrar==1)? 5: dia - 1;
+				diaAMostrar = (diaAMostrar==1)? 5: diaAMostrar - 1;
 			}
 			$('#dia-a-mostrar').val(diaAMostrar).change();
 		});
