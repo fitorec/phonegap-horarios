@@ -47,7 +47,7 @@ var app = {
 		var today=new Date();
 		var horaActual = parseInt(today.getHours());
 		//A todas las filas de la tabla(tr) le quitamos la clase CSS activa
-		//$('tr.activa').removeClass('activa');
+		$('tr.activa').removeClass('activa');
 		// Para cada th que este en el cuerpo de las tablas
 		// Nota: Cada th contiene la horas en formato: horaInicial - horaFinal
 		$('tbody tr th').each(function() {
