@@ -78,7 +78,6 @@ table{
 	border-collapse: collapse;
 	font-size: 1.5em;
 	width: 100%;
-	background: #FFF;
 }
 td, th {
 	text-align: center;
@@ -107,6 +106,13 @@ sup {
 tr:nth-child(even) {background: #FFF}
 tbody tr:nth-child(odd) {background: #CCC}
 
+tr.receso{
+	background: #4FE148;
+}
+tr.libre,
+tr.apoyo {
+	background: #E8E872 !important;
+}
 
-tr.activa:nth-child(even) {background: #B0FF8F}
-tbody tr.activa:nth-child(odd) {background: #B0FF8F}
+tr.activa:nth-child(even) {background: #1293FF}
+tbody tr.activa:nth-child(odd) {background: #017CE4}

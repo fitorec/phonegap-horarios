@@ -18,7 +18,7 @@ var app = {
 			}
 			$('#dia-a-mostrar').val(diaAMostrar).change();
 		});
-		//Codigo al iniciar phonegap
+		//Obtenemos el día a mostrar inicialmente(valor entre 1 y 5)
 		var d = new Date();
 		var dia = d.getDay();
 		if(dia<1 || dia>5) {
@@ -47,7 +47,7 @@ var app = {
 		var today=new Date();
 		var horaActual = parseInt(today.getHours());
 		//A todas las filas de la tabla(tr) le quitamos la clase CSS activa
-		$('tr.activa').removeClass('activa');
+		//$('tr.activa').removeClass('activa');
 		// Para cada th que este en el cuerpo de las tablas
 		// Nota: Cada th contiene la horas en formato: horaInicial - horaFinal
 		$('tbody tr th').each(function() {
@@ -61,7 +61,7 @@ var app = {
 		//Aqui se debe de actualizar el elemento con id hora
 		// .........................................
 		// $('#hora').text('HH:MM');
-		//Mandamos a llamar a la función actualizarVista en 30 segundos (3mil milisegundos)
+		//Mandamos a llamar a la función actualizarVista en 30 segundos (30mil milisegundos)
 		setTimeout("app.actualizarVista()", 30000);
 	}
 };
