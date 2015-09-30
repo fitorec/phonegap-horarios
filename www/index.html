@@ -8,23 +8,28 @@
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="msapplication-tap-highlight" content="no" />
 		<meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<title>Mi horario de clases</title>
 	</head>
 	<body>
-	<h1>
-	<select id="dia-a-mostrar">
-		<option value="1" selected>Lunes</option>
-		<option value="2">Martes</option>
-		<option value="3">Miercoles</option>
-		<option value="4">Jueves</option>
-		<option value="5">Viernes</option>
-	</select>
-	<span id='fecha'>Fecha</span>
-	<span id='hora'>Hora</span>
-	</h1>
-<!-- Dia Lunes -->
-		<table class='tabla_horario' id='dia_1'>
+		<div data-role="page">
+		<div data-role="header">
+			<h2>
+			<select id="dia-a-mostrar">
+					<option value="1" selected>Lunes</option>
+					<option value="2">Martes</option>
+					<option value="3">Miercoles</option>
+					<option value="4">Jueves</option>
+					<option value="5">Viernes</option>
+				</select>
+			</h2>
+			<span id='fecha' class="ui-title ui-btn-left">Fecha</span>
+			<span id='hora' class="ui-title ui-btn-right">Hora</span>
+	</div><!-- /header -->
+	<div data-role="content">
+	<!-- Dia Lunes -->
+	<table class='tabla_horario' id='dia_1'>
 			<thead>
 				<tr>
 					<th>Horario</th>
@@ -305,6 +310,8 @@
 				</tr>
 			</tbody>
 		</table>
+		</div><!-- fin role content -->
+	</div><!-- fin role page -->
 		<!-- Aqui agregar tabla de sus horarios -->
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/jquery.js"></script>

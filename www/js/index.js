@@ -8,14 +8,18 @@ var app = {
 		//Evento al desplazar una tabla.
 		// ver ejemplo en:
 		//   http://demos.jquerymobile.com/1.3.2/examples/panels/panel-swipe-open.html#&ui-state=dialog&ui-state=dialog
-		$(document).on( "swipeleft swipedown swiperight swipeup", "table", function(e){
-			var diaAMostrar = parseInt($('#dia-a-mostrar').val());
-			if(e.type == 'swipeleft' || e.type == 'swipedown') {
+		$(document).on( "swipeleft swiperight", "table", function(e) {
+			var diaAnterior = parseInt($('#dia-a-mostrar').val());
+			var diaAMostrar = diaAnterior;
+			var fecha = new Date($('#dia-a-mostrar').data('fecha'));
+			if(e.type == 'swipeleft') {
 				diaAMostrar = (diaAMostrar==5)? 1: diaAMostrar + 1;
 			}
-			if(e.type == 'swiperight' || e.type == 'swipeup') {
+			if(e.type == 'swiperight') {
 				diaAMostrar = (diaAMostrar==1)? 5: diaAMostrar - 1;
 			}
+			var fechaNueva = new Date(fecha);
+			fechaNueva.setDate(fecha.getDate() + (diaAMostrar - diaAnterior));
 			$('#dia-a-mostrar').val(diaAMostrar).change();
 		});
 		//Obtenemos el día a mostrar inicialmente(valor entre 1 y 5)
@@ -24,7 +28,7 @@ var app = {
 		if(dia<1 || dia>5) {
 			dia = 1;
 		}
-		$('#dia-a-mostrar').val(dia);
+		$('#dia-a-mostrar').val(dia).data('fecha', d.toDateString());
 		$('#dia_' + dia).fadeIn('slow');
 		//Mostrando la fecha actual
 		var meses = new Array(
@@ -55,13 +59,22 @@ var app = {
 			var horaInicial = parseInt($.trim(horarios[0]));
 			var horaFinal = parseInt($.trim(horarios[1]));
 			//Aqui comparar horaActual con horaInicial y horaFinal
-			// Y agregar la clase "activa" sobre el padre del th es decir el tr
-			// $(this).closest('tr').addClass('activa');
+			if (horaActual >= horaInicial && horaActual < horaFinal ) {
+				$(this).closest('tr').addClass('activa');
+			}
 		});
 		//Aqui se debe de actualizar el elemento con id hora
 		// .........................................
-		// $('#hora').text('HH:MM');
-		//Mandamos a llamar a la función actualizarVista en 30 segundos (30mil milisegundos)
+		var horaStr = dosDigitos(today.getHours()) + ':' + dosDigitos(today.getMinutes());
+		$('#hora').text(horaStr);
+		//Mandamos a llamar a la función actualizarVista en 30 segundos (30 segundos)
 		setTimeout("app.actualizarVista()", 30000);
 	}
 };
+
+function dosDigitos(num) {
+	if (num<10) {
+		return '0' + num;
+	}
+	return num;
+}
