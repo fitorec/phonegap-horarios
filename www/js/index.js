@@ -9,6 +9,10 @@ var app = {
 		// ver ejemplo en:
 		//   http://demos.jquerymobile.com/1.3.2/examples/panels/panel-swipe-open.html#&ui-state=dialog&ui-state=dialog
 		$(document).on( "swipeleft swiperight", "table", function(e) {
+			////////////////////////////////////////
+			navigator.notification.beep(5);
+			navigator.notification.vibrate(2500);
+			////////////////////////////////////////
 			var diaAnterior = parseInt($('#dia-a-mostrar').val());
 			var diaAMostrar = diaAnterior;
 			var fecha = new Date($('#dia-a-mostrar').data('fecha'));
@@ -21,10 +25,6 @@ var app = {
 			var fechaNueva = new Date(fecha);
 			fechaNueva.setDate(fecha.getDate() + (diaAMostrar - diaAnterior));
 			$('#dia-a-mostrar').val(diaAMostrar).change();
-			////////////////////////////////////////
-			navigator.notification.beep(5);
-			navigator.notification.vibrate(2500);
-			////////////////////////////////////////
 		});
 		//Obtenemos el día a mostrar inicialmente(valor entre 1 y 5)
 		var d = new Date();
