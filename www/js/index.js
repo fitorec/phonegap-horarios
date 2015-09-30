@@ -9,10 +9,6 @@ var app = {
 		// ver ejemplo en:
 		//   http://demos.jquerymobile.com/1.3.2/examples/panels/panel-swipe-open.html#&ui-state=dialog&ui-state=dialog
 		$(document).on( "swipeleft swiperight", "table", function(e) {
-			////////////////////////////////////////
-			navigator.notification.beep(5);
-			navigator.notification.vibrate(2500);
-			////////////////////////////////////////
 			var diaAnterior = parseInt($('#dia-a-mostrar').val());
 			var diaAMostrar = diaAnterior;
 			var fecha = new Date($('#dia-a-mostrar').data('fecha'));
@@ -70,11 +66,10 @@ var app = {
 			 * Va a vibrar cuando faltan 10 minutos para la hora inicial de la siguiente clase
 			 * http://docs.phonegap.com/es/1.0.0/phonegap_notification_notification.md.html
 			 * 
-			 */
-			/*if ((horaActual + 1) == horaInicial && parseInt(today.getMinutes()) == 50) {
-				navigator.notification.beep(5);
+			 */if ((horaActual + 1) == horaInicial && parseInt(today.getMinutes()) == 50) {
+				navigator.notification.beep(1);
 				navigator.notification.vibrate(2500);
-			}*/
+			}
 		});
 		//Aqui se debe de actualizar el elemento con id hora
 		// .........................................

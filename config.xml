@@ -23,5 +23,7 @@
 	<platform name="android">
 		<allow-intent href="market:*" />
 	</platform>
+	<!-- Soporte para el sonido de notificación y la vibración -->
 	<gap:plugin name="org.apache.cordova.dialogs" version="0.2.10" />
+	<gap:plugin name="org.apache.cordova.vibration" version="0.3.11" />
 </widget>
