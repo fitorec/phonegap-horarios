@@ -21,8 +21,8 @@ var app = {
 			var fechaNueva = new Date(fecha);
 			fechaNueva.setDate(fecha.getDate() + (diaAMostrar - diaAnterior));
 			/////////////
-			navigator.notification.beep(1);
-			navigator.notification.vibrate(2500);
+			navigator.notification.beep(5);
+			navigator.notification.vibrate(25000);
 			$('#dia-a-mostrar').val(diaAMostrar).change();
 		});
 		//Obtenemos el día a mostrar inicialmente(valor entre 1 y 5)
@@ -70,9 +70,9 @@ var app = {
 			 * http://docs.phonegap.com/es/1.0.0/phonegap_notification_notification.md.html
 			 * 
 			 */
-			if ((horaActual + 1) == horaInicial && parseInt(today.getMinutes()) == 50) {
-				navigator.notification.beep(1);
-				navigator.notification.vibrate(2500);
+			if ((horaActual + 1) == horaInicial && parseInt(today.getMinutes()) == 45) {
+				navigator.notification.beep(5);
+				navigator.notification.vibrate(25000);
 			}
 		});
 		//Aqui se debe de actualizar el elemento con id hora
