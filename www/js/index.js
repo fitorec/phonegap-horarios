@@ -21,6 +21,7 @@ var app = {
 			var fechaNueva = new Date(fecha);
 			fechaNueva.setDate(fecha.getDate() + (diaAMostrar - diaAnterior));
 			/////////////
+			navigator.notification.alert("Cambio de clase!!");
 			navigator.notification.beep(5);
 			navigator.notification.vibrate(25000);
 			$('#dia-a-mostrar').val(diaAMostrar).change();
