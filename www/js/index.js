@@ -21,9 +21,6 @@ var app = {
 			var fechaNueva = new Date(fecha);
 			fechaNueva.setDate(fecha.getDate() + (diaAMostrar - diaAnterior));
 			/////////////
-			navigator.notification.alert("Cambio de clase!!");
-			navigator.notification.beep(5);
-			navigator.notification.vibrate(25000);
 			$('#dia-a-mostrar').val(diaAMostrar).change();
 		});
 		//Obtenemos el día a mostrar inicialmente(valor entre 1 y 5)
@@ -71,7 +68,8 @@ var app = {
 			 * http://docs.phonegap.com/es/1.0.0/phonegap_notification_notification.md.html
 			 * 
 			 */
-			if ((horaActual + 1) == horaInicial && parseInt(today.getMinutes()) == 45) {
+			if ((horaActual + 1) == horaInicial && parseInt(today.getMinutes()) == 50) {
+				navigator.notification.alert("Cambio de modulo!");
 				navigator.notification.beep(5);
 				navigator.notification.vibrate(25000);
 			}
