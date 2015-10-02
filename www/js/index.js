@@ -20,6 +20,9 @@ var app = {
 			}
 			var fechaNueva = new Date(fecha);
 			fechaNueva.setDate(fecha.getDate() + (diaAMostrar - diaAnterior));
+			/////////////
+			navigator.notification.beep(1);
+			navigator.notification.vibrate(2500);
 			$('#dia-a-mostrar').val(diaAMostrar).change();
 		});
 		//Obtenemos el día a mostrar inicialmente(valor entre 1 y 5)
@@ -66,7 +69,8 @@ var app = {
 			 * Va a vibrar cuando faltan 10 minutos para la hora inicial de la siguiente clase
 			 * http://docs.phonegap.com/es/1.0.0/phonegap_notification_notification.md.html
 			 * 
-			 */if ((horaActual + 1) == horaInicial && parseInt(today.getMinutes()) == 50) {
+			 */
+			if ((horaActual + 1) == horaInicial && parseInt(today.getMinutes()) == 50) {
 				navigator.notification.beep(1);
 				navigator.notification.vibrate(2500);
 			}
