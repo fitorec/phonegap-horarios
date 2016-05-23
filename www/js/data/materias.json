@@ -1,0 +1,42 @@
+materias = {
+ "AEB_1054": {
+	nombre: "Programación Orientada a Objetos",
+	semestre: 2,
+	grupo: 'A'
+ },
+ "TIB_1024": {
+	nombre: "Programación II",
+	semestre: 4,
+	grupo: 'A'
+ },
+ "AEH_1063": {
+	nombre: "Taller de Bases de Datos",
+	semestre: 4,
+	grupo: 'A'
+ },
+ "TIB_1025": {
+	nombre: "Programación Web",
+	semestre: 6,
+	grupo: 'A'
+ },
+ "AEC_1061": {
+	nombre: "Sistemas operativos I",
+	semestre: 6,
+	grupo: 'A'
+ },
+ "TIC_1029": {
+	nombre: "Tecnologías Inalámbricas",
+	semestre: 6,
+	grupo: 'A'
+ },
+ "TID_1015": {
+	nombre: "Ingeniería del Conocimiento",
+	semestre: 8,
+	grupo: 'A'
+ },
+ "TIH_1016": {
+	nombre: "Interacción Humano Computadora",
+	semestre: 8,
+	grupo: 'A'
+ }
+}

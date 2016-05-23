@@ -1,6 +1,12 @@
 var app = {
 	// Constructor de la aplicacion
 	initialize: function() {
+		$('.tabla_horario span.materia').each(function(key, value) {
+			var id = $(this).data('id');
+			var content = '<a href="./' + id + '.html">' + materias[id].nombre + '</a>';
+			$(this).html(content);
+		});
+
 		$('#dia-a-mostrar').change(function() {
 			$('.tabla_horario').hide();
 			$('#dia_' + $(this).val()).fadeIn('slow');
