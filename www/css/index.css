@@ -1,3 +1,7 @@
+a{
+	text-decoration: none;
+}
+
 .tabla_horario {
 	display: none;
 }
@@ -50,7 +54,9 @@ tr.apoyo {
 	background: #E8E872 !important;
 }
 
-tr.activa:nth-child(even) {background: #1293FF; color: #FFF; text-shadow: 0 -1px 0 RGBA(0,0,0,0.3)}
+td.activa, tr.activa:nth-child(even) {
+	background: #1293FF; color: #FFF; text-shadow: 0 -1px 0 RGBA(0,0,0,0.3)
+}
 tbody tr.activa:nth-child(odd) td div, 
 tbody tr.activa:nth-child(odd) {background: #017CE4; color: #FFF; text-shadow: 0 -1px 0 RGBA(0,0,0,0.3)}
 
@@ -79,4 +85,7 @@ body div.ui-page{
 		margin-top: 3px;
 		padding: 5px;
 	}
+}
+table.temario td{
+	white-space:pre-line;
 }
