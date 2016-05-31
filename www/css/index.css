@@ -2,6 +2,14 @@ a{
 	text-decoration: none;
 }
 
+tbody > tr.activa > td > span > a,
+tbody > tr.activa > td > span > a:visited
+{
+	color: #E5FE8E;
+}
+tbody > tr.activa > td > span > a:hover {
+	color: #FEE807;
+}
 .tabla_horario {
 	display: none;
 }
@@ -57,7 +65,7 @@ tr.apoyo {
 td.activa, tr.activa:nth-child(even) {
 	background: #1293FF; color: #FFF; text-shadow: 0 -1px 0 RGBA(0,0,0,0.3)
 }
-tbody tr.activa:nth-child(odd) td div, 
+tbody tr.activa:nth-child(odd) td div,
 tbody tr.activa:nth-child(odd) {background: #017CE4; color: #FFF; text-shadow: 0 -1px 0 RGBA(0,0,0,0.3)}
 
 body div.ui-content {
@@ -66,7 +74,7 @@ body div.ui-content {
 body div.ui-page{
 	background-color:#E4E4E4;
 }
-/** 
+/**
  * Vista para dispositivos pequeños
  ***/
 @media (max-width: 600px) and (orientation: landscape){

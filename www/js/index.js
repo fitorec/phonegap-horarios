@@ -49,7 +49,7 @@ var app = {
 	},
 	/**
 	 * Este metodo se encarga de actualizar la vista cada 30segundos
-	 * 
+	 *
 	 *  - Activa la fila con clase Actual
 	 *  - Actualiza el reloj
 	 */
@@ -72,7 +72,7 @@ var app = {
 			/**
 			 * Va a vibrar cuando faltan 10 minutos para la hora inicial de la siguiente clase
 			 * http://docs.phonegap.com/es/1.0.0/phonegap_notification_notification.md.html
-			 * 
+			 *
 			 */
 			if ((horaActual + 1) == horaInicial && parseInt(today.getMinutes()) == 50) {
 				navigator.notification.alert("Cambio de modulo!");
