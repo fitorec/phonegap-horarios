@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Martes</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/jqm.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+<div data-role="page">
+	<div data-role="header">
+		<h1>
+			<select id="diaMostrado">
+				<option value="lunes">Lunes</option>
+				<option value="martes" selected>Martes</option>
+				<option value="miercoles">miercoles</option>
+				<option value="jueves">Jueves</option>
+				<option value="viernes">viernes</option>
+			</select>
+		</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<table>
+					<thead>
+						<tr>
+							<th>Hora</th>
+							<th>Materia</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class='tiempo'>07:00 - 09:00</td>
+							<td>
+								Estructura y organización de datos
+								<small>
+									<span class='prof'>3<sup>ro</sup> TICs</span>
+									<span class='lugar'>A9</span>
+								</small>
+							</td>
+						</tr>
+						<tr class='libre'>
+							<td class='tiempo'>09:00 - 10:00</td>
+							<td>
+								Almuerzo
+							</td>
+						</tr>
+						<tr>
+							<td class='tiempo'>10:00 - 12:00</td>
+							<td>
+								Fundamentos de bases de datos
+								<small>
+									<span class='prof'>3<sup>ro</sup> TICs</span>
+									<span class='lugar'>A9</span>
+								</small>
+							</td>
+						</tr>
+						<tr>
+							<td class='tiempo'>12:00 - 14:00</td>
+							<td>
+								Desarrollo de Aplicaciones para Dispositivos Móviles
+								<small>
+									<span class='prof'>Miguel Angel Marcial Martinez</span>
+									<span class='lugar'>A7</span>
+								</small>
+							</td>
+						</tr>
+						<tr>
+							<td class='tiempo'>14:00 - 15:00</td>
+							<td>
+								Sistemas Operativos II
+								<small>
+									<span class='prof'>Miguel Angel Marcial Martinez</span>
+									<span class='lugar'>A11</span>
+								</small>
+							</td>
+						</tr>
+						<tr class='libre'>
+							<td class='tiempo'>15:00 - 16:00</td>
+							<td>
+								Comida
+							</td>
+						</tr>
+						<tr>
+							<td class='tiempo'>16:00 - 17:00</td>
+							<td>
+								Sistemas Operativos II
+								<small>
+									<span class='prof'>Miguel Angel Marcial Martinez</span>
+									<span class='lugar'>A11</span>
+								</small>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+	</div><!-- /content -->
+</div><!-- /page -->
+	</body>
+	<!-- Agregando librerias -->
+	<script src='js/jquery.js'></script>
+	<script src='js/jqm.js'></script>
+	<script src='js/app.js'></script>
+</html>

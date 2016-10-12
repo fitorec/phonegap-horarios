@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>viernes</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">s
+		<link rel="stylesheet" href="css/jqm.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+<div data-role="page">
+	<div data-role="header">
+		<h1>
+			<select id="diaMostrado">
+				<option value="lunes">Lunes</option>
+				<option value="martes">Martes</option>
+				<option value="miercoles">miercoles</option>
+				<option value="jueves">Jueves</option>
+				<option value="viernes" selected>viernes</option>
+			</select>
+		</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<table>
+					<thead>
+						<tr>
+							<th>Hora</th>
+							<th>Materia</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class='tiempo'>07:00 - 09:00</td>
+							<td>
+								Arquitectura de Computadoras
+								<small>
+									<span class='prof'>5<sup>to</sup> TICs</span>
+									<span class='lugar'>Centro de Computo</span>
+								</small>
+							</td>
+						</tr>
+						<tr>
+							<td class='tiempo'>09:00 - 10:00</td>
+							<td>
+							Almuerzo
+						</tr>
+						<tr class='libre'>
+							<td class='tiempo'>10:00 - 11:00</td>
+							<td>
+								Libre
+						</tr>
+						<tr>
+							<td class='tiempo'>11:00 - 12:00</td>
+							<td>
+								Hora de apoyo
+						</tr>
+						<tr>
+							<td class='tiempo'>12:00 - 13:00</td>
+							<td>
+								Fundamentos de Bases de datos
+								<small>
+									<span class='prof'>3<sup>ro</sup> TICs</span>
+									<span class='lugar'>A5</span>
+								</small>
+							</td>
+						</tr>
+						<tr>
+							<td class='tiempo'>13:00 - 15:00</td>
+							<td>
+								Taller de Ingeniería de Software
+								<small>
+									<span class='prof'>5<sup>to</sup> TICs</span>
+									<span class='lugar'>A9</span>
+								</small>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+	</div><!-- /content -->
+</div><!-- /page -->
+	</body>
+	<!-- Agregando librerias -->
+	<script src='js/jquery.js'></script>
+	<script src='js/jqm.js'></script>
+	<script src='js/app.js'></script>
+</html>
