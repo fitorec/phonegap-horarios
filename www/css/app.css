@@ -106,3 +106,28 @@ tr td small span.lugar {
 div.ui-page.ui-page-theme-a{
 	background: #222;
 }
+
+/** medias queries **/
+@media (max-width: 800px) {
+	tr th, tr td {
+		font-size: 1.5em;
+	}
+	tr td small span.prof, tr td small span.grupo, tr td small span.lugar {
+		padding: 0px 5px;
+	}
+	tr td small {
+		font-size:0.7em;
+	}
+}
+
+@media (max-width: 480px) {
+	tr th, tr td {
+		font-size: 1.2em;
+	}
+}
+
+
+
+
+
+
