@@ -8,7 +8,6 @@ app = {
 	},
 	cargarTemario: function ($el) {
 		materia = $el.data('clase');
-		console.log('./temario_'+materia+ '.html');
 		$(':mobile-pagecontainer')
 		.pagecontainer('change', './temario_'+materia+ '.html');
 	},

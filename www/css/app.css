@@ -25,6 +25,8 @@ tr.libre td {
 	background: #002934;
 	text-shadow: 1px 1px 3px #000, -1px -1px 5px #000;
 }
+
+span.unidad,
 th.dia_de_clase,
 tr.clase_actual td {
 	color: #FFF;
@@ -65,6 +67,10 @@ tr td{
 	padding: 0;
 	border-top: solid #222 2px;
 }
+tr td.temas {
+	text-align: justify;
+}
+
 tr td.tiempo {
 	background: rgba(0,0,0,0.3);
 }
@@ -106,6 +112,17 @@ tr td small span.lugar {
 
 div.ui-page.ui-page-theme-a{
 	background: #222;
+}
+
+.dia_de_clase,
+tr.clase {
+	cursor:pointer;
+}
+
+span.unidad {
+	font-size: 2em;
+	display: block;
+	border-radius: 20px;
 }
 
 /**
