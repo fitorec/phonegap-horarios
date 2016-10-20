@@ -25,6 +25,7 @@ tr.libre td {
 	background: #002934;
 	text-shadow: 1px 1px 3px #000, -1px -1px 5px #000;
 }
+th.dia_de_clase,
 tr.clase_actual td {
 	color: #FFF;
 	text-shadow: 1px 1px 1px #0B5074;
@@ -105,4 +106,36 @@ tr td small span.lugar {
 
 div.ui-page.ui-page-theme-a{
 	background: #222;
+}
+
+/**
+ * Diseño para pantallas grandes
+ * Mayores a 1200px
+ **/
+@media screen and (min-width: 1201px) {
+	
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+	tr th, tr td {
+		font-size: 1em;
+	}
+
+	tr td small span.prof,
+	tr td small span.grupo,
+	tr td small span.lugar {
+		padding: 1px 10px;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	tr th, tr td {
+		font-size: 0.8em;
+	}
+
+	tr td small span.prof,
+	tr td small span.grupo,
+	tr td small span.lugar {
+		padding: 0px 5px;
+	}
 }

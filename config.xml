@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="mx.edu.itsmigra.horario" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="mx.edu.itsmigra.horario" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
 	<name>Horario</name>
 	<description>
 		Una muy simple aplicación que muestra mis horarios actuales de un profesor/grupo.
@@ -18,12 +18,12 @@
 	<icon src="icon.png" />
 	<access origin="*" />
 	<plugin name="cordova-plugin-whitelist" version="1" />
-	<allow-intent href="http://*/*" />
-	<allow-intent href="https://*/*" />
 	<platform name="android">
 		<allow-intent href="market:*" />
 	</platform>
 	<!-- Soporte para el sonido de notificación y la vibración -->
 	<gap:plugin name="org.apache.cordova.dialogs" version="0.2.10" />
 	<gap:plugin name="org.apache.cordova.vibration" version="0.3.11" />
+	<!-- Soporte para la base de datos -->
+	<plugin name="com.brodysoft.sqliteplugin" spec="1.0.6" source="pgb" />
 </widget>
