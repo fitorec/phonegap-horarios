@@ -25,6 +25,9 @@ tr.libre td {
 	background: #002934;
 	text-shadow: 1px 1px 3px #000, -1px -1px 5px #000;
 }
+
+span.unidad,
+th.dia_de_clase,
 tr.clase_actual td {
 	color: #FFF;
 	text-shadow: 1px 1px 1px #0B5074;
@@ -64,6 +67,10 @@ tr td{
 	padding: 0;
 	border-top: solid #222 2px;
 }
+tr td.temas {
+	text-align: justify;
+}
+
 tr td.tiempo {
 	background: rgba(0,0,0,0.3);
 }
@@ -107,27 +114,45 @@ div.ui-page.ui-page-theme-a{
 	background: #222;
 }
 
-/** medias queries **/
-@media (max-width: 800px) {
+.dia_de_clase,
+tr.clase {
+	cursor:pointer;
+}
+
+span.unidad {
+	font-size: 2em;
+	display: block;
+	border-radius: 20px;
+}
+
+/**
+ * Diseño para pantallas grandes
+ * Mayores a 1200px
+ **/
+@media screen and (min-width: 1201px) {
+	
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
 	tr th, tr td {
-		font-size: 1.5em;
+		font-size: 1em;
 	}
-	tr td small span.prof, tr td small span.grupo, tr td small span.lugar {
+
+	tr td small span.prof,
+	tr td small span.grupo,
+	tr td small span.lugar {
+		padding: 1px 10px;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	tr th, tr td {
+		font-size: 0.8em;
+	}
+
+	tr td small span.prof,
+	tr td small span.grupo,
+	tr td small span.lugar {
 		padding: 0px 5px;
 	}
-	tr td small {
-		font-size:0.7em;
-	}
 }
-
-@media (max-width: 480px) {
-	tr th, tr td {
-		font-size: 1.2em;
-	}
-}
-
-
-
-
-
-

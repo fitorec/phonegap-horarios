@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>jueves</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/jqm.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+<div data-role="page">
+	<div data-role="header">
+		<h1>
+			<select id="diaMostrado">
+				<option value="lunes">Lunes</option>
+				<option value="martes">Martes</option>
+				<option value="miercoles">miercoles</option>
+				<option value="jueves" selected>Jueves</option>
+				<option value="viernes">viernes</option>
+			</select>
+		</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<table>
+			<thead>
+				<tr>
+					<th class='dia_de_clase'>Lu</th>
+					<th>Ma</th>
+					<th>Mie</th>
+					<th>Jue</th>
+					<th class='dia_de_clase'>Vie</th>
+				</tr>
+			</thead>
+			</table>
+			<table>
+				<thead>
+					<tr>
+						<th>Unidad</th>
+						<th>Temas</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class='unidad'>01</span>
+							Modelo de arquitectura de cómputo.
+						</td>
+						<td class='temas'>
+							<ul>
+								<li>1.1 Modelos de arquitecturas de cómputo: clásicas, segmentadas, de multiprocesamiento.</li>
+								<li>1.2 Análisis de los componentes: CPU, arquitectura, memoria, dispositivos de I/O. </li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class='unidad'>02</span>
+							Comunicación interna en la computadora 
+						</td>
+						<td class='temas'>
+							<ul>
+								<li>2.1 Buses: bus local, bus de datos, bus de direcciones, bus de control, buses normalizados.</li>
+								<li>2.2 Direccionamiento: modo real, modo protegido, modo real virtual.</li>
+								<li>2.3 Temporización: reloj de sistema, reset del sistema, estados de espera.</li>
+								<li>2.4 Interrupciones de Hardware: Enmascarable, no-enmascarable.</li>
+								<li>2.5 Acceso directo a memoria. </li>
+								<li>2.6 Sistema de video.</li>
+								<li>2.7 Sistema de discos.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class='unidad'>03</span>
+							La Computadora basada en un procesador
+						</td>
+						<td class='temas'>
+							<ul>
+								<li>3.1 <b>Chip Set</b>: CPU, controlador del Bus, puertos de E/S, controlador de Interrupciones, controlador de DMA, circuitos de temporización y control, controladores de video.</li>
+								<li>3.2 Aplicaciones: entrada/ Salida, almacenamiento y Fuente de alimentación. </li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class='unidad'>04</span>
+							Micro-controladores
+						</td>
+						<td class='temas'>
+							<ul>
+								<li>4.1 Arquitectura: terminales, CPU, espacio de Memoria, entrada/ Salida, características especiales.</li>
+								<li>4.2 Programación: modelo de programación, conjunto de instrucciones, modos de direccionamiento, lenguaje ensamblador. </li>
+								<li>4.3 Aplicaciones: como sistema independiente, como subsistema de una computadora. </li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+	</div><!-- /content -->
+</div><!-- /page -->
+	</body>
+	<!-- Agregando librerias -->
+	<script src='js/jquery.js'></script>
+	<script src='js/jqm.js'></script>
+	<script src='js/app.js'></script>
+</html>

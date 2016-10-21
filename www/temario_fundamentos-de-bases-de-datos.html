@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>jueves</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/jqm.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+<div data-role="page">
+	<div data-role="header">
+		<h1>
+			<select id="diaMostrado">
+				<option value="lunes">Lunes</option>
+				<option value="martes">Martes</option>
+				<option value="miercoles">miercoles</option>
+				<option value="jueves" selected>Jueves</option>
+				<option value="viernes">viernes</option>
+			</select>
+		</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<table>
+			<thead>
+				<tr>
+					<th>Lu</th>
+					<th class='dia_de_clase'>Ma</th>
+					<th>Mie</th>
+					<th class='dia_de_clase'>Jue</th>
+					<th class='dia_de_clase'>Vie</th>
+				</tr>
+			</thead>
+			</table>
+			<table>
+				<thead>
+					<tr>
+						<th>Unidad</th>
+						<th>Temas</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class='unidad'>01</span>
+							Introducción a las bases de datos.
+						</td>
+						<td class='temas'>
+							<ul>
+								<li>1.1 Conceptos básicos.</li>
+								<li>1.2 Objetivos de las Bases de Datos.</li>
+								<li>1.3 Áreas de Aplicación de los Sistemas de Bases de datos.</li>
+								<li>1.4 Modelos de bases de datos..</li>
+								<li>1.5 Clasificación de Bases de Datos..</li>
+								<li>1.6 Arquitectura de base de datos.</li>
+								<li>1.7 Arquitectura del SGBD.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class='unidad'>02</span>
+							Diseño de Bases de Datos con el modelo ER.
+						</td>
+						<td class='temas'>
+							<ul>
+								<li>2.1 El Proceso de Diseño.</li>
+								<li>2.2 Modelo Entidad-Relación.</li>
+								<li>2.3 Diseño con diagramas E-R..</li>
+								<li>2.4 Modelo E-R extendido.</li>
+								<li>2.5 La Notación E-R con UML.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class='unidad'>03</span>
+							Modelo relacional.
+						</td>
+						<td class='temas'>
+							<ul>
+								<li>3.1 Introducción al modelo relacional.</li>
+								<li>3.2 Conversión de Modelo E-R a Modelo relacional.</li>
+								<li>3.3 Esquema de la base de datos</li>
+								<li>3.4 Restricciones</li>
+								<li>3.3.1 Integridad de entidad</li>
+								<li>3.3.2 Integridad referencial</li>
+								<li>3.5 Integridad de dominio</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class='unidad'>04</span>
+							Normalización de bases de datos. 
+						</td>
+						<td class='temas'>
+							<ul>
+								<li>4.1 Conceptos básicos .</li>
+								<li>4.2 Primera forma normal.</li>
+								<li>4.3 Dependencias funcionales y transitivas.</li>
+								<li>4.4 Segunda forma normal.</li>
+								<li>4.5 Tercera forma normal.</li>
+								<li>4.6 Forma normal Boyce-Codd. </li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class='unidad'>05</span>
+							Álgebra relacional. 
+						</td>
+						<td class='temas'>
+							<ul>
+								<li>5.1 Operaciones fundamentales del álgebra relacional.</li>
+								<li>5.2 Álgebra relacional extendida. </li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class='unidad'>06</span>
+							Introducción al lenguaje SQL
+						</td>
+						<td class='temas'>
+							<ul>
+								<li>6.1 Características.</li>
+								<li>6.2 Lenguaje de Definición de Datos (LDD).</li>
+								<li>6.3 Lenguaje de Manipulación de Datos (LMD).</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+	</div><!-- /content -->
+</div><!-- /page -->
+	</body>
+	<!-- Agregando librerias -->
+	<script src='js/jquery.js'></script>
+	<script src='js/jqm.js'></script>
+	<script src='js/app.js'></script>
+</html>

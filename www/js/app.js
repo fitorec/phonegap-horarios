@@ -6,6 +6,11 @@ app = {
 		$(':mobile-pagecontainer')
 		.pagecontainer('change', app.dia + '.html');
 	},
+	cargarTemario: function ($el) {
+		materia = $el.data('clase');
+		$(':mobile-pagecontainer')
+		.pagecontainer('change', './temario_'+materia+ '.html');
+	},
 	// Si recibe un numero devuelve una palabra:
 	// 1 "lunes", 2 "martes",..., 5 "viernes"
 	// Si recibe una palabra devuele el número:
@@ -48,8 +53,10 @@ app = {
 			txt = $(this).text().split('-');
 			tInicio = tiempo2int(txt[0]);
 			tFinal  = tiempo2int(txt[1]);
+			dActual = d.getDay();
+			var diaNumero = app._dia(app.dia);
 			// Revisamos que la hora actual este entre el rango
-			if ( tInicio <= tActual && tFinal>= tActual) {
+			if ( tInicio <= tActual && tFinal>= tActual && dActual == diaNumero) {
 				$('.tiempo').parent().removeClass('clase_actual');
 				$(this).parent().addClass('clase_actual');
 			}
@@ -77,6 +84,41 @@ $(function() {
 		dia = app._dia(numDiaSemana);
 	}
 	app.changePage(dia);
+	// Cuando le dan clic a una clase se mueve al temario
+	$(document).on(
+		'click',
+		'tr.clase',
+		function() {
+			app.cargarTemario($(this));
+	});
+	// Cuando desde un temario nos movemos a un determinado dia
+	$(document).on(
+		'click',
+		'th.dia_de_clase',
+		function() {
+			contenido = $(this).text();
+			dia = '';
+			switch (contenido)
+			{
+				case 'Lu':
+					dia = 'lunes';
+					break;
+				case 'Ma':
+					dia = 'martes';
+					break;
+				case 'Mie':
+					dia = 'miercoles';
+					break;
+				case 'Jue':
+					dia = 'jueves';
+					break;
+				case 'Vie':
+					dia = 'viernes';
+					break;
+				default:
+			}
+			app.changePage(dia);
+	});
 	// desplazamiento izquierdo (siguiente)
 	$(document).on(
 		'swipeleft',
