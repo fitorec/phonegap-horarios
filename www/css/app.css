@@ -109,6 +109,11 @@ tr td small span.lugar {
 .ui-content{
 	padding: 0;
 }
+.ui-content h1 {
+	color: white;
+	text-align: center;
+	text-shadow: 3px 3px 2px #000;
+}
 
 div.ui-page.ui-page-theme-a{
 	background: #222;
