@@ -29,10 +29,7 @@ app = {
 	// lunes -> martes.
 	//  viernes -> lunes
 	siguiente: function(d) {
-		console.log("dia actual"+app.dia);
 		var diaNumero = app._dia(app.dia);
-		console.log("dia actualNumero"+diaNumero);
-		console.log("dia siguiente:"+app.dias[diaNumero%5]);
 		return app.dias[diaNumero%5];
 	},
 	// Devuelve el nombre del siguiete previo
@@ -124,6 +121,9 @@ $(function() {
 		'swipeleft',
 		'div[data-role="page"]',
 		function() {
+			if ( esTemario($(this)) ) {
+				return;
+			}
 			var sig = app.siguiente();
 			app.changePage(sig);
 	});
@@ -132,6 +132,9 @@ $(function() {
 		'swiperight',
 		'div[data-role="page"]',
 		function() {
+			if ( esTemario($(this)) ) {
+				return;
+			}
 			var sig = app.previo();
 			app.changePage(sig);
 	});
@@ -143,3 +146,15 @@ $(function() {
 	// Mandamos a actualizar la vista cada 30s
 	app.actualizarVista();
 });
+
+/**
+ * Regresa true si la pagina actual tiene un temario
+ *
+ **/
+function esTemario($el) {
+	var url = $el.data('url');
+	if( url.indexOf('temario_') >= 0 ) {
+		return true;
+	}
+	return false;
+}
