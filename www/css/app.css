@@ -84,6 +84,8 @@ tr td small {
 	margin:0;
 }
 
+
+table tbody tr td span.fechas,
 tr td small span.prof,
 tr td small span.grupo,
 tr td small span.lugar {
@@ -94,7 +96,9 @@ tr td small span.lugar {
 	padding: 2px 20px;
 	box-shadow: inset 1px 1px 5px #FF2927, inset -1px -1px 5px #40000A;
 }
-
+table tbody tr td span.fechas {
+	display: block;
+}
 tr td small span.prof,
 tr td small span.grupo {
 	float: left;
